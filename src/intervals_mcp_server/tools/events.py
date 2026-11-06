@@ -372,11 +372,6 @@ async def _fetch_events_for_deletion(
     return events, None
 
 
-@mcp.tool(
-    annotations=ToolAnnotations(
-        title="Delete Events by Date Range", read_only_hint=False, destructive_hint=True
-    )
-)
 async def delete_events_by_date_range(
     start_date: str,
     end_date: str,

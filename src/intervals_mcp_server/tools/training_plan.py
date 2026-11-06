@@ -165,11 +165,6 @@ async def apply_plan_to_calendar(
     return f"Successfully applied plan (folder {folder_id}) starting {start_date_local} for athlete {athlete_id_to_use}."
 
 
-@mcp.tool(
-    annotations=ToolAnnotations(
-        title="Change Athlete Plans (Bulk)", read_only_hint=False, destructive_hint=False
-    )
-)
 async def change_athlete_plans_bulk(
     plan_changes: list[dict[str, Any]],
     api_key: str = "",

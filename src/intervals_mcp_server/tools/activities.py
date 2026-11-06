@@ -518,11 +518,6 @@ async def update_activity(
     return f"Successfully updated activity {activity_id}."
 
 
-@mcp.tool(
-    annotations=ToolAnnotations(
-        title="Delete Activity", read_only_hint=False, destructive_hint=True
-    )
-)
 async def delete_activity(activity_id: str, api_key: str = "") -> str:
     """Permanently delete an activity from Intervals.icu.
 
